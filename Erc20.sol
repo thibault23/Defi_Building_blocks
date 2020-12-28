@@ -5,7 +5,7 @@ import '@openzeppelin/contracts/token/ERC20/IERC20.sol';
 
 interface ContractB {
   function deposit(uint amount) external;
-  function withdraw (uint amount) external
+  function withdraw (uint amount) external;
 }
 
 //simple token
