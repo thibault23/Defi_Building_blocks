@@ -9,4 +9,8 @@ Implementation of various DeFi blocks
 
 - [x] Erc721.sol: NFT, nft minting, faucet for ERC721, nft transfer and forward.
 
-- [x] oracles: an oracle contract that stores external BTC/USD price from coingecko, a consumer contract that can fetch the data upon request from the oracle contract, an oracle API in Javascript that gets the current BTC/USD price from coingecko and reports the data to the oracle contract. 
+- [x] oracles: an oracle contract that stores external BTC/USD price from coingecko, a consumer contract that can fetch the data upon request from the oracle contract, an oracle API in Javascript that gets the current BTC/USD price from coingecko and reports the data to the oracle contract.
+
+- [x] liquidity mining: liquidity pool staking with unerlying token -> lp token and issuance of governance token.
+
+- [x] flashloans: flashloan smart contract provider and user with callback.
