@@ -14,3 +14,5 @@ Implementation of various DeFi blocks
 - [x] liquidity mining: liquidity pool staking with unerlying token -> lp token and issuance of governance token.
 
 - [x] flashloans: flashloan smart contract provider and user with callback.
+
+- [x] dao: governance smart contract with proposal and vote functions tied to a governance token
