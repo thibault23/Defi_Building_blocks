@@ -16,3 +16,5 @@ Implementation of various DeFi blocks
 - [x] flashloans: flashloan smart contract provider and user with callback.
 
 - [x] dao: governance smart contract with proposal and vote functions tied to a governance token
+
+- [x] uniswap integration: interact with uniswap smart contract using Solidity.
