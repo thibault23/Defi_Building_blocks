@@ -18,3 +18,5 @@ Implementation of various DeFi blocks
 - [x] dao: governance smart contract with proposal and vote functions tied to a governance token
 
 - [x] uniswap integration: interact with uniswap smart contract using Solidity.
+
+- [x] compound: interact with functions from compound project. We assume "MyDefiProject.sol" already has some tokens in it.

@@ -19,7 +19,7 @@ contract MyDefiProject {
   function lend(address _cTokenAddress, uint _underlyingAmount) external {
     CTokenInterface cToken = CTokenInterface(_cTokenAddress);
     address underlyingAdress = cToken.underlying();
-    IERC20(underlyingAdress).approve(cTokenAddress, underlyingAmount);
+    IERC20(underlyingAdress).approve(_cTokenAddress, _underlyingAmount);
     uint result = cToken.mint(_underlyingAmount);
     require(
       result == 0,
@@ -29,8 +29,8 @@ contract MyDefiProject {
 
    //redeem the ctokens against the underlying amount + interests
    function redeem (address _cTokenAddress, uint _underlyingAmount) external {
-     CTokenInterface cToken = CTokenInterface(cTokenAddress);
-     uint result = cToken.redeem(cTokenAmount);
+     CTokenInterface cToken = CTokenInterface(_cTokenAddress);
+     uint result = cToken.redeem(_underlyingAmount);
      require(
        result == 0,
        'cToken#redeem() failed. see Compound ErrorReporter.sol for more details'
@@ -53,12 +53,46 @@ contract MyDefiProject {
         'comptroller#enterMarket() failed. see Compound ErrorReporter.sol for more details''
         )
     }
-    
+
+
     //once we have enter a market, we are ready to borrow
     //function to borrow
+    function borrow(uint _borrowAmount, address _cTokenAddress) external {
+      CTokenInterface cToken = CTokenInterface(_cTokenAddress);
+      address underlyingAddress = cToken.underlying();
+      uint result = cToken.borrow(_borrowAmount);
+      require(
+        result == 0,
+        'cToken#borrow() failed. see Compound ErrorReporter.sol for more details'
+      );
+    }
 
     //function to repay borrow
+    function repayBorrow(uint _repayAmount, address _cTokenAddress) external {
+      CTokenInterface cToken = CTokenInterface(_cTokenAddress);
+      address underlyingAddress = cToken.underlying();
+      IERC20(underlyingAdress).approve(_cTokenAddress, _repayAmount);
+      uint result = cToken.repayBorrow(_repayAmount);
+      require(
+        result == 0,
+        'cToken#repayBorrow() failed. see Compound ErrorReporter.sol for more details'
+      );
+    }
 
     //function to get max borrow
+    function getMaxBorrow(address _cTokenAddress) external view returns(uint) {
 
+      (uint result, uint liquidity, uint shortfall) = comptroller
+        .getAccountLiquidity(address(this)));
+      require(
+        result == 0,
+        'cToken#getAccountLiquidity() failed. see Compound ErrorReporter.sol for more details'
+      );
+      require(shortfall == 0, 'account underwater');
+      require(liquidity > 0, 'account does not have collateral');
+
+      uint underlyingPrice = oracle.getUnderlyingPrice(_cTokenAddress);
+
+      return liquidity / underlyingPrice;
+    }
 }
