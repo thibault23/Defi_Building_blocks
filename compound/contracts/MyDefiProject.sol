@@ -50,8 +50,8 @@ contract MyDefiProject {
       uint[] memory results = comptroller.enterMarkets(markets);
       require(
         results[0] == 0,
-        'comptroller#enterMarket() failed. see Compound ErrorReporter.sol for more details''
-        )
+        'comptroller#enterMarket() failed. see Compound ErrorReporter.sol for more details'
+        );
     }
 
 
@@ -71,7 +71,7 @@ contract MyDefiProject {
     function repayBorrow(uint _repayAmount, address _cTokenAddress) external {
       CTokenInterface cToken = CTokenInterface(_cTokenAddress);
       address underlyingAddress = cToken.underlying();
-      IERC20(underlyingAdress).approve(_cTokenAddress, _repayAmount);
+      IERC20(underlyingAddress).approve(_cTokenAddress, _repayAmount);
       uint result = cToken.repayBorrow(_repayAmount);
       require(
         result == 0,
@@ -83,7 +83,7 @@ contract MyDefiProject {
     function getMaxBorrow(address _cTokenAddress) external view returns(uint) {
 
       (uint result, uint liquidity, uint shortfall) = comptroller
-        .getAccountLiquidity(address(this)));
+        .getAccountLiquidity(address(this));
       require(
         result == 0,
         'cToken#getAccountLiquidity() failed. see Compound ErrorReporter.sol for more details'

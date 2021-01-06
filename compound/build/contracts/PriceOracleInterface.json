@@ -1,0 +1,295 @@
+{
+  "contractName": "PriceOracleInterface",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "asset",
+          "type": "address"
+        }
+      ],
+      "name": "getUnderlyingPrice",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.7.3+commit.9bfce1f6\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"asset\",\"type\":\"address\"}],\"name\":\"getUnderlyingPrice\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/home/thibault/Documents/Ethereum/Eattheblocks/Defi-Development-Mastery/Defi-building-blocks/compound/contracts/PriceOracleInterface.sol\":\"PriceOracleInterface\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/thibault/Documents/Ethereum/Eattheblocks/Defi-Development-Mastery/Defi-building-blocks/compound/contracts/PriceOracleInterface.sol\":{\"keccak256\":\"0x458e37660960f1832d9ca49295205ca7ed6abb1df646e721cb32cde0df1eaad1\",\"urls\":[\"bzz-raw://8d6d77f821554a3a7c81020ee42ee963c39f3ef99d83114f837eca010e9f90ea\",\"dweb:/ipfs/QmbwiFfa3aw6ADWAFgGe3aa3aXAPqmSYwNvFTacd23SCcC\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.7.3;\n\ninterface PriceOracleInterface {\nfunction getUnderlyingPrice(address asset) external view returns(uint);\n}\n",
+  "sourcePath": "/home/thibault/Documents/Ethereum/Eattheblocks/Defi-Development-Mastery/Defi-building-blocks/compound/contracts/PriceOracleInterface.sol",
+  "ast": {
+    "absolutePath": "/home/thibault/Documents/Ethereum/Eattheblocks/Defi-Development-Mastery/Defi-building-blocks/compound/contracts/PriceOracleInterface.sol",
+    "exportedSymbols": {
+      "PriceOracleInterface": [
+        381
+      ]
+    },
+    "id": 382,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 373,
+        "literals": [
+          "solidity",
+          "^",
+          "0.7",
+          ".3"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:4"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 381,
+        "linearizedBaseContracts": [
+          381
+        ],
+        "name": "PriceOracleInterface",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "fc57d4df",
+            "id": 380,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getUnderlyingPrice",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 376,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 375,
+                  "mutability": "mutable",
+                  "name": "asset",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 380,
+                  "src": "86:13:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 374,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "86:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "85:15:4"
+            },
+            "returnParameters": {
+              "id": 379,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 378,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 380,
+                  "src": "123:4:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 377,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "123:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "122:6:4"
+            },
+            "scope": 381,
+            "src": "58:71:4",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 382,
+        "src": "25:106:4"
+      }
+    ],
+    "src": "0:132:4"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/thibault/Documents/Ethereum/Eattheblocks/Defi-Development-Mastery/Defi-building-blocks/compound/contracts/PriceOracleInterface.sol",
+    "exportedSymbols": {
+      "PriceOracleInterface": [
+        381
+      ]
+    },
+    "id": 382,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 373,
+        "literals": [
+          "solidity",
+          "^",
+          "0.7",
+          ".3"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:4"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 381,
+        "linearizedBaseContracts": [
+          381
+        ],
+        "name": "PriceOracleInterface",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "fc57d4df",
+            "id": 380,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getUnderlyingPrice",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 376,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 375,
+                  "mutability": "mutable",
+                  "name": "asset",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 380,
+                  "src": "86:13:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 374,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "86:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "85:15:4"
+            },
+            "returnParameters": {
+              "id": 379,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 378,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 380,
+                  "src": "123:4:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 377,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "123:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "122:6:4"
+            },
+            "scope": 381,
+            "src": "58:71:4",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 382,
+        "src": "25:106:4"
+      }
+    ],
+    "src": "0:132:4"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.7.3+commit.9bfce1f6.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.1",
+  "updatedAt": "2021-01-06T10:28:36.117Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

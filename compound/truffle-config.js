@@ -1,3 +1,9 @@
+const HDWalletProvider = require('@truffle/hdwallet-provider');
+
+const privateKey = '792749ca2264fb875d550005b46f2c916665485855b7ba413248d7ed8197a081';
+const infuraUrl = 'https://rinkeby.infura.io/v3/59e08ff901694a8d837d202dbd91b344';
+
+
 /**
  * Use this file to configure your truffle project. It's seeded with some
  * common settings for different networks and features like migrations,
@@ -66,6 +72,16 @@ module.exports = {
     // timeoutBlocks: 200,  // # of blocks before a deployment times out  (minimum/default: 50)
     // skipDryRun: true     // Skip dry run before migrations? (default: false for public nets )
     // },
+    rinkeby: {
+      timeoutBlocks: 200000,
+      networkCheckTimeout: 10000,
+      provider: () => new HDWalletProvider(
+        privateKey,
+        infuraUrl
+      ),
+      network_id: 4,
+      skipDryRun: true
+    },
     // Useful for private networks
     // private: {
     // provider: () => new HDWalletProvider(mnemonic, `https://network.io`),

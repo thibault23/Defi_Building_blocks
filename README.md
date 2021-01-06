@@ -19,4 +19,4 @@ Implementation of various DeFi blocks
 
 - [x] uniswap integration: interact with uniswap smart contract using Solidity.
 
-- [x] compound: interact with functions from compound project. We assume "MyDefiProject.sol" already has some tokens in it.
+- [x] compound: interact with functions from compound project. We assume "MyDefiProject.sol" already has some tokens in it. Adding scripts to interact with compound smart contracts on Rinkeby. Also pre funding deployed Defi project with Dai.
